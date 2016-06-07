@@ -2,7 +2,7 @@
 
 namespace EnchantedRealms;
 
-use pocketmine\event\Listener
+use pocketmine\event\Listener;
 use pocketmine\event\PlayerDeathEvent;
 use pocketmine\command\Command;
 use pocketmine\entity\Effect;
