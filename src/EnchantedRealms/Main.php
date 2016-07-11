@@ -23,8 +23,8 @@ class Main extends PluginBase implements Listener{
       $killer->addEffect($speed);
       $strength->setDuration(7);
       $strength->setAmplifier(2);
-      $killer-addEffect($strenght);
-      $killer->sendPopup(TextFormat::RED."You are in a bloodlust!");
+      $killer-addEffect($strength);
+      $killer->sendPopup("§7You have entered a §4§lBLOODLUST§r§7!");
     }
   }
 }
