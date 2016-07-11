@@ -16,8 +16,8 @@ class Main extends PluginBase implements Listener{
     $player = $event->getPlayer();
     if($player->getLastDamageCause() instanceof EntityDamageByEntityEvent){
       $killer = $event->getDamager();
-      $speed = Effect::get(1);
-      $strength = Effect::get(5);
+      $speed = Effect::getEffect(1);
+      $strength = Effect::getEffect(5);
       $speed->setDuration(7);
       $speed->setAmplifier(2);
       $killer->addEffect($speed);
