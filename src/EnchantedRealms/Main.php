@@ -21,14 +21,14 @@ class Main extends PluginBase implements Listener{
   public function onDeath(PlayerDeathEvent $event){
     $player = $event->getPlayer();
     $killer = $event->getLastDamageCause();
-    $speed = Effect::getEffect(1);
-    $strength = Effect::getEffect(5);
+    $speed = Effect::getEffectByName("SPEED");
+    $strength = Effect::getEffectByName("STREGNTH");
     $speed->setDuration(7);
     $speed->setAmplifier(2);
     $killer->addEffect($speed);
     $strength->setDuration(7);
     $strength->setAmplifier(2);
     $killer-addEffect($strength);
-    $killer->sendPopup("§7You have entered a §4§lBLOODLUST§r§7!");
+    $killer->sendPopup(TextFormat::GRAY . "You have entered a " . TextFormat::DARK_RED . TextFormat::BOLD . "BLOODLUST" . TextFormat::RESET . TextFormat::GRAY . "!");
     }
 }
