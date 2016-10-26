@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener{
     $player = $event->getPlayer();
     $killer = $event->getLastDamageCause();
     $speed = Effect::getEffectByName("SPEED");
-    $strength = Effect::getEffectByName("STREGNTH");
+    $strength = Effect::getEffectByName("STRENGTH");
     $speed->setDuration(7);
     $speed->setAmplifier(2);
     $killer->addEffect($speed);
