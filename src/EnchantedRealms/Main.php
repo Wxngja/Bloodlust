@@ -10,6 +10,7 @@ use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\utils\TextFormat as TF;
 
 class Main extends PluginBase implements Listener{
   public function onPlayerDeathEvent(PlayerDeathEvent $event){
@@ -24,7 +25,7 @@ class Main extends PluginBase implements Listener{
       $strength->setDuration(7);
       $strength->setAmplifier(2);
       $killer-addEffect($strenght);
-      $killer->sendPopup(TextFormat::RED."You are in a bloodlust!");
+      $killer->sendPopup(TF::RED."[Bloodlust]". TF::GREEN. TF::BOLD ."BLOODLUST ACTIVATED!");
     }
   }
 }
